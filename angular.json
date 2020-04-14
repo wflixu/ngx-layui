@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "lay",
   "projects": {
-    "ngx-layui": {
+    "ngx-layui-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-layui",
+            "outputPath": "dist/ngx-layui-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-layui:build"
+            "browserTarget": "ngx-layui-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-layui:build:production"
+              "browserTarget": "ngx-layui-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-layui:build"
+            "browserTarget": "ngx-layui-demo:build"
           }
         },
         "test": {
@@ -115,15 +115,50 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-layui:serve"
+            "devServerTarget": "ngx-layui-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-layui:serve:production"
+              "devServerTarget": "ngx-layui-demo:serve:production"
             }
           }
         }
       }
+    },
+    "lay": {
+      "projectType": "library",
+      "root": "lay",
+      "sourceRoot": "lay/src",
+      "prefix": "lay",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "lay/tsconfig.lib.json",
+            "project": "lay/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "lay/src/test.ts",
+            "tsConfig": "lay/tsconfig.spec.json",
+            "karmaConfig": "lay/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "lay/tsconfig.lib.json",
+              "lay/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
-  "defaultProject": "ngx-layui"
+  "defaultProject": "ngx-layui-demo"
 }
