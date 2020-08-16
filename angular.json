@@ -126,36 +126,35 @@
     },
     "lay": {
       "projectType": "library",
-      "root": "projects/lay",
-      "sourceRoot": "projects/lay/src",
+      "root": "components",
       "prefix": "la",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/lay/tsconfig.lib.json",
-            "project": "projects/lay/ng-package.json"
+            "tsConfig": "components/tsconfig.lib.json",
+            "project": "conponents/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/lay/tsconfig.lib.prod.json"
+              "tsConfig": "components/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/lay/src/test.ts",
-            "tsConfig": "projects/lay/tsconfig.spec.json",
-            "karmaConfig": "projects/lay/karma.conf.js"
+            "main": "components/src/test.ts",
+            "tsConfig": "components/tsconfig.spec.json",
+            "karmaConfig": "components/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/lay/tsconfig.lib.json",
-              "projects/lay/tsconfig.spec.json"
+              "components/tsconfig.lib.json",
+              "components/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

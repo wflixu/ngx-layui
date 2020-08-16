@@ -1,0 +1,16 @@
+// Configuration for IDEs only.
+
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "ng-lay": ["./ng-lay.module"],
+      "ng-lay/*": ["./*"]
+    }
+  },
+  "include": [
+    "./**/*.ts"
+  ]
+}

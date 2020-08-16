@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayModule } from 'projects/lay/src/public-api';
-import { LaAlertModule } from 'projects/lay/src/lib/la-alert/la-alert.module';
+import { LaAlertModule } from 'projects/lay/src/lib/alert/alert.module';
 
 @NgModule({
   declarations: [

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { LaAlertModule } from './la-alert/la-alert.module';
+import { LaAlertModule } from './alert/alert.module';
 
 // export * from 'lib/alert';
 @NgModule({
