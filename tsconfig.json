@@ -1,33 +1,29 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "rootDir": ".",
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "importHelpers": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "importHelpers": true,
     "target": "es2015",
+    "paths": {
+      "ng-lay": [ "./components/ng-lay.module.ts" ],
+      "ng-lay/*": [ "./components/*" ],
+    },
+    "typeRoots": ["node_modules/@types/!(node)"],
     "lib": [
       "es2018",
       "dom"
     ],
-    "paths": {
-      "layui": [
-        "dist/layui/layui",
-        "dist/layui"
-      ],
-      "lay": [
-        "dist/lay/lay",
-        "dist/lay"
-      ]
-    }
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "types": ["jasmine"],
+    "skipLibCheck": true,
   }
 }

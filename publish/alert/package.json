@@ -1,0 +1,12 @@
+{
+  "main": "../bundles/ng-lay-alert.umd.js",
+  "module": "../fesm5/ng-lay-alert.js",
+  "es2015": "../fesm2015/ng-lay-alert.js",
+  "esm5": "../esm5/alert/ng-lay-alert.js",
+  "esm2015": "../esm2015/alert/ng-lay-alert.js",
+  "fesm5": "../fesm5/ng-lay-alert.js",
+  "fesm2015": "../fesm2015/ng-lay-alert.js",
+  "typings": "ng-lay-alert.d.ts",
+  "sideEffects": false,
+  "name": "ng-lay/alert"
+}

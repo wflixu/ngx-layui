@@ -1,0 +1,5 @@
+/**
+ * Generated bundle index. Do not edit.
+ */
+export * from './ng-lay.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmctbGF5LmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmctbGF5LyIsInNvdXJjZXMiOlsibmctbGF5LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYyxpQkFBaUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogR2VuZXJhdGVkIGJ1bmRsZSBpbmRleC4gRG8gbm90IGVkaXQuXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9uZy1sYXkubW9kdWxlJztcbiJdfQ==

@@ -133,7 +133,7 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "components/tsconfig.lib.json",
-            "project": "conponents/ng-package.json"
+            "project": "components/ng-package.json"
           },
           "configurations": {
             "production": {

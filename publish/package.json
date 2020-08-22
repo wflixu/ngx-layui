@@ -1,0 +1,57 @@
+{
+  "name": "ng-lay",
+  "version": "9.0.0",
+  "license": "MIT",
+  "description": "An enterprise-class UI components based on Ant Design and Angular",
+  "schematics": "./schematics/collection.json",
+  "ng-update": {
+    "migrations": "./schematics/migration.json",
+    "packageGroup": [
+      "ng-lay"
+    ]
+  },
+  "keywords": [
+    "ant",
+    "design",
+    "angular",
+    "ui",
+    "framework",
+    "frontend"
+  ],
+  "homepage": "https://ng.ant.design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NG-ZORRO/ng-lay"
+  },
+  "bugs": {
+    "url": "https://github.com/NG-ZORRO/ng-lay/issues"
+  },
+  "dependencies": {
+    "@angular/cdk": "^9.0.0",
+    "@ant-design/icons-angular": "^9.0.0",
+    "date-fns": "^2.10.0",
+    "resize-observer-polyfill": "^1.5.1"
+  },
+  "peerDependencies": {
+    "@angular/animations": "^9.0.0",
+    "@angular/common": "^9.0.0",
+    "@angular/forms": "^9.0.0",
+    "@angular/core": "^9.0.0",
+    "@angular/platform-browser": "^9.0.0",
+    "@angular/router": "^9.0.0",
+    "rxjs": "~6.5.3",
+    "tslib": "^1.10.0"
+  },
+  "main": "bundles/ng-lay.umd.js",
+  "module": "fesm5/ng-lay.js",
+  "es2015": "fesm2015/ng-lay.js",
+  "esm5": "esm5/ng-lay.js",
+  "esm2015": "esm2015/ng-lay.js",
+  "fesm5": "fesm5/ng-lay.js",
+  "fesm2015": "fesm2015/ng-lay.js",
+  "typings": "ng-lay.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+  }
+}

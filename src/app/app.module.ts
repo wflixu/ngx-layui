@@ -1,11 +1,12 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LayModule } from 'projects/lay/src/public-api';
-import { LaAlertModule } from 'projects/lay/src/lib/alert/alert.module';
+import { LaAlertModule } from 'ng-lay/alert';
+
 
 @NgModule({
   declarations: [
