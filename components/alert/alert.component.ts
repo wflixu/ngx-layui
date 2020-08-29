@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'la-alert',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alert.component.less']
 })
 export class LaAlertComponent implements OnInit {
+  /**
+   * alertt 文本内容
+   */
+  @Input() label:string;
 
   constructor() { }
 
