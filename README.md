@@ -1,6 +1,8 @@
-# LayuiDemo
+# LayUI ng
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+ng g c button/button   --project=lay --flat
+
+ng g module button --project=lay
 
 ## Development server
 
@@ -22,6 +24,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## documents
+[ngx-layui](https://github.com/wflixu/ngx-layui/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

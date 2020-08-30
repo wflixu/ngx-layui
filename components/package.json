@@ -2,7 +2,14 @@
   "name": "ng-lay",
   "version": "9.0.0",
   "license": "MIT",
-  "description": "An enterprise-class UI components based on Ant Design and Angular",
+  "description": "An enterprise-class UI components based on layui",
+  "scripts": {
+    "build": "../node_modules/.bin/tsc -p tsconfig.schematics.json",
+    "copy:schemas": "cp --parents schematics/*/schema.json ../publish/schematics",
+    "copy:files": "cp --parents -p schematics/*/files/** ../publish/schematics",
+    "copy:collection": "cp schematics/collection.json ../publish/schematics/schematics/collection.json",
+    "postbuild": "npm run copy:schemas && npm run copy:files && npm run copy:collection"
+  },
   "schematics": "./schematics/collection.json",
   "ng-update": {
     "migrations": "./schematics/migration.json",
