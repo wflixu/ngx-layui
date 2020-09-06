@@ -9,6 +9,10 @@
       "description": "Generate a service in the project.",
       "factory": "./my-service/index#myService",
       "schema": "./my-service/schema.json"
+    },
+    "new-module": {
+      "description": "A blank schematic.",
+      "factory": "./new-module/index#newModule"
     }
   }
 }

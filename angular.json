@@ -127,6 +127,7 @@
     "lay": {
       "projectType": "library",
       "root": "components",
+      "sourceRoot":"components",
       "prefix": "la",
       "architect": {
         "build": {
