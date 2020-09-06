@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "publish/style/lay.css",
+              "publish/style/ng-lay.css",
               "src/styles.less"
             ],
             "scripts": []
