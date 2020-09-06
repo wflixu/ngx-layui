@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "publish/style/lay.css",
               "src/styles.less"
             ],
             "scripts": []
