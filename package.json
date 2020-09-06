@@ -4,16 +4,17 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "schematics ngx-lay-cli:new-module --name=test",
+    "dev": "node ./script/start",
+    "build": " tsc ./publish/schematics -p ./tsconfig.schematics.json",
+    "test": "schematics ngx-lay-cli:new-module --name=test --style=less --type=Component",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build:schematics": "tsc -p ./tsconfig.schematics.json",
     "build-storybook": "npm run docs:json && build-storybook -o ./docs",
-    "link": "npm link ./schematics",
-    "my-test":"ng generate ngx-lay-cli:my-service --name=foo"
+    "link": "npm link ./publish/schematics",
+    "my-test": "ng generate ngx-lay-cli:my-service --name=foo"
   },
   "private": true,
   "schematics": "./schematics/collection.json",
