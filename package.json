@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "dev": "node ./script/start",
     "build": " tsc ./publish/schematics -p ./tsconfig.schematics.json",
     "build:theme": " lessc ./components/style/entry.less  ./publish/style/lay.css",
     "test": "schematics ngx-lay-cli:new-module --name=test --style=less --type=Component",

@@ -1,6 +1,126 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "Schema",
+            "id": "interface-Schema-3409eb44267993d3ff5eb56cc3e42e05",
+            "file": "schematics/my-service/schema.ts",
+            "type": "interface",
+            "sourceCode": "export interface Schema {\r\n  // The name of the service.\r\n  name: string;\r\n\r\n  // The path to create the service.\r\n  path?: string;\r\n\r\n  // The name of the project.\r\n  project?: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "path",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "project",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": []
+        },
+        {
+            "name": "Schema",
+            "id": "interface-Schema-a613b4169223364df5e77ba98c68fb14-1",
+            "file": "schematics/new-module/schema.ts",
+            "type": "interface",
+            "sourceCode": "export interface Schema {\r\n  // The name of the service.\r\n  name: string;\r\n\r\n  // The path to create the service.\r\n  path?: string;\r\n\r\n  style: string;\r\n\r\n  type: string;\r\n\r\n  // The name of the project.\r\n  project?: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "path",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "project",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "style",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "Schema-1"
+        },
+        {
+            "name": "Schema",
+            "id": "interface-Schema-3409eb44267993d3ff5eb56cc3e42e05-2",
+            "file": "components/schematics/my-service/schema.ts",
+            "type": "interface",
+            "sourceCode": "export interface Schema {\r\n  // The name of the service.\r\n  name: string;\r\n\r\n  // The path to create the service.\r\n  path?: string;\r\n\r\n  // The name of the project.\r\n  project?: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "path",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "project",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": [],
+            "isDuplicate": true,
+            "duplicateId": 2,
+            "duplicateName": "Schema-2"
+        }
+    ],
     "injectables": [],
     "classes": [
         {
@@ -37,6 +157,63 @@
     ],
     "directives": [],
     "components": [
+        {
+            "name": "AlertBaseComponent",
+            "id": "component-AlertBaseComponent-abf75f6e50300abefc4d1365bee2698c",
+            "file": "src/app/alert-test/alert-base.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-alert-base",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./alert-base.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "label",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-alert-base',\n  templateUrl: './alert-base.component.html',\n})\nexport class AlertBaseComponent implements OnInit {\n\n  label:string;\n\n  constructor() { }\n\n  ngOnInit(): void {\n    this.label='这是label 的内容';\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 9
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<h2>la-alert</h2>\n\n<la-alert [label]=\"label\">\n</la-alert>\n\n<la-alert>\n   <ng-template >\n     sdlfkglkl lsdkflg\n   </ng-template>\n</la-alert>\n\n<la-alert type=\"success\">\n  <ng-template >\n    这是块提示的内容\n  </ng-template>\n</la-alert>\n"
+        },
         {
             "name": "AppComponent",
             "id": "component-AppComponent-b7bed35c82ee6bc68ac4de565d620eed",
@@ -82,7 +259,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<h1>home</h1>\r\n\r\n<la-alert></la-alert>\r\n\r\n\r\n"
+            "templateData": "\r\n<router-outlet></router-outlet>\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -229,17 +406,18 @@
         },
         {
             "name": "LaAlertComponent",
-            "id": "component-LaAlertComponent-d02879104fdae333c1fbaa2053fa243a",
+            "id": "component-LaAlertComponent-bead2ba2bf7c9602410f3a5457e9fa82",
             "file": "components/alert/alert.component.ts",
-            "encapsulation": [],
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
             "entryComponents": [],
+            "host": {},
             "inputs": [],
             "outputs": [],
             "providers": [],
             "selector": "la-alert",
-            "styleUrls": [
-                "./alert.component.less"
-            ],
+            "styleUrls": [],
             "styles": [],
             "templateUrl": [
                 "./alert.component.html"
@@ -248,21 +426,58 @@
             "inputsClass": [
                 {
                     "name": "label",
+                    "defaultValue": "''",
                     "description": "<p>alertt 文本内容</p>\n",
-                    "line": 12,
+                    "line": 27,
                     "type": "string"
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'success'",
+                    "line": 28,
+                    "type": "\"success\" | \"info\" | \"warn\" | \"error\""
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "labelTpl",
+                    "type": "TemplateRef<any>",
+                    "optional": false,
+                    "description": "",
+                    "line": 30,
+                    "decorators": [
+                        {
+                            "name": "ContentChild",
+                            "stringifiedArguments": "TemplateRef, {static: false}"
+                        }
+                    ]
+                }
+            ],
             "methodsClass": [
+                {
+                    "name": "ngAfterContentChecked",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39
+                },
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34
+                },
                 {
                     "name": "ngOnInit",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 16
+                    "line": 33
                 }
             ],
             "hostBindings": [],
@@ -270,25 +485,22 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'la-alert',\r\n  templateUrl: './alert.component.html',\r\n  styleUrls: ['./alert.component.less']\r\n})\r\nexport class LaAlertComponent implements OnInit {\r\n  /**\r\n   * alertt 文本内容\r\n   */\r\n  @Input() label:string;\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
+            "sourceCode": "import {\r\n  Component,\r\n  OnInit,\r\n  Input,\r\n  ViewEncapsulation,\r\n  TemplateRef,\r\n  ContentChild,\r\n   AfterContentChecked, AfterViewInit\r\n} from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'la-alert',\r\n  templateUrl: './alert.component.html',\r\n\r\n  encapsulation: ViewEncapsulation.None,\r\n  host:{\r\n    '[class.la-alert-success]':'type ===\"success\" ',\r\n    '[class.la-alert-info]':'type ===\"info\" ',\r\n    '[class.la-alert-error]':'type ===\"error\"',\r\n    '[class.la-alert-warn]':'type ===\"warn\"',\r\n  }\r\n})\r\nexport class LaAlertComponent implements OnInit, AfterContentChecked, AfterViewInit {\r\n  /**\r\n   * alertt 文本内容\r\n   */\r\n  @Input() label: string = '';\r\n  @Input() type: 'success'| 'info' | 'warn' | 'error' = 'success';\r\n\r\n  @ContentChild(TemplateRef, { static: false }) labelTpl: TemplateRef<any>;\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n  ngAfterViewInit(): void {\r\n    console.log(this.labelTpl);\r\n\r\n\r\n  }\r\n  ngAfterContentChecked(): void {\r\n     console.log(this.labelTpl);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./alert.component.less"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 12
+                "line": 30
             },
             "implements": [
-                "OnInit"
+                "OnInit",
+                "AfterContentChecked",
+                "AfterViewInit"
             ],
-            "templateData": "<section>\r\n  {{label}}\r\n</section>\r\n"
+            "templateData": "<section >\r\n  <span\r\n   [ngClass]=\"{'la-icon-ok-circle': type === 'success',\r\n     'la-icon-about': type === 'info',\r\n     'la-icon-close-fill': type === 'error'\r\n    }\"\r\n  class=\"la-icon-about\"></span>\r\n   <ng-container *ngTemplateOutlet=\"labelTpl? labelTpl: labelDefaultTpl\"></ng-container>\r\n   <ng-template #labelDefaultTpl>\r\n      {{label}}\r\n   </ng-template>\r\n\r\n</section>\r\n"
         },
         {
             "name": "PageComponent",
@@ -354,6 +566,75 @@
         }
     ],
     "modules": [
+        {
+            "name": "AlertRoutingModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AlertTestModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AlertBaseComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AlertRoutingModule"
+                        },
+                        {
+                            "name": "LaAlertModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
         {
             "name": "AppModule",
             "children": [
@@ -537,6 +818,14 @@
                 "type": "any"
             },
             {
+                "name": "Basic",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/alert/Alert.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -576,6 +865,14 @@
                 "type": "RegExp"
             },
             {
+                "name": "Label",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/alert/Alert.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -612,14 +909,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Page.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "components/alert/Alert.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -708,9 +997,129 @@
                 "file": "src/stories/Page.stories.ts",
                 "type": "Story<Page>",
                 "defaultValue": "(args: Page) => ({\n  component: Page,\n  props: args,\n})"
+            },
+            {
+                "name": "Type",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/alert/Alert.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             }
         ],
-        "functions": [],
+        "functions": [
+            {
+                "name": "myService",
+                "file": "schematics/my-service/index.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "",
+                "args": [
+                    {
+                        "name": "options"
+                    }
+                ],
+                "returnType": "Rule",
+                "jsdoctags": [
+                    {
+                        "name": "options",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "myService",
+                "file": "components/schematics/my-service/index.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "",
+                "args": [
+                    {
+                        "name": "options"
+                    }
+                ],
+                "returnType": "Rule",
+                "jsdoctags": [
+                    {
+                        "name": "options",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "newModule",
+                "file": "schematics/new-module/index.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "",
+                "args": [
+                    {
+                        "name": "_options",
+                        "type": "any"
+                    }
+                ],
+                "returnType": "Rule",
+                "jsdoctags": [
+                    {
+                        "name": "_options",
+                        "type": "any",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ngAdd",
+                "file": "schematics/ng-add/index.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "",
+                "args": [
+                    {
+                        "name": "_options",
+                        "type": "any"
+                    }
+                ],
+                "returnType": "Rule",
+                "jsdoctags": [
+                    {
+                        "name": "_options",
+                        "type": "any",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ngAdd",
+                "file": "components/schematics/ng-add/index.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "",
+                "args": [
+                    {
+                        "name": "_options",
+                        "type": "any"
+                    }
+                ],
+                "returnType": "Rule",
+                "jsdoctags": [
+                    {
+                        "name": "_options",
+                        "type": "any",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
@@ -759,6 +1168,40 @@
                     "file": "components/test.ts",
                     "type": "",
                     "defaultValue": "__karma__.config.args[0]"
+                }
+            ],
+            "components/alert/Alert.stories.ts": [
+                {
+                    "name": "Basic",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/alert/Alert.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Label",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/alert/Alert.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/alert/Alert.stories.ts",
+                    "type": "Story<LaAlertComponent>",
+                    "defaultValue": "(args: LaAlertComponent) => ({\n  component: LaAlertComponent,\n  props: args,\n})"
+                },
+                {
+                    "name": "Type",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/alert/Alert.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ],
             "src/test.ts": [
@@ -891,27 +1334,131 @@
                     "type": "Story<Page>",
                     "defaultValue": "(args: Page) => ({\n  component: Page,\n  props: args,\n})"
                 }
+            ]
+        },
+        "groupedFunctions": {
+            "schematics/my-service/index.ts": [
+                {
+                    "name": "myService",
+                    "file": "schematics/my-service/index.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "options"
+                        }
+                    ],
+                    "returnType": "Rule",
+                    "jsdoctags": [
+                        {
+                            "name": "options",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
             ],
-            "components/alert/Alert.stories.ts": [
+            "components/schematics/my-service/index.ts": [
                 {
-                    "name": "Primary",
+                    "name": "myService",
+                    "file": "components/schematics/my-service/index.ts",
                     "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "components/alert/Alert.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
+                    "subtype": "function",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "options"
+                        }
+                    ],
+                    "returnType": "Rule",
+                    "jsdoctags": [
+                        {
+                            "name": "options",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "schematics/new-module/index.ts": [
                 {
-                    "name": "Template",
+                    "name": "newModule",
+                    "file": "schematics/new-module/index.ts",
                     "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "components/alert/Alert.stories.ts",
-                    "type": "Story<LaAlertComponent>",
-                    "defaultValue": "(args: LaAlertComponent) => ({\n  component: LaAlertComponent,\n  props: args,\n})"
+                    "subtype": "function",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "_options",
+                            "type": "any"
+                        }
+                    ],
+                    "returnType": "Rule",
+                    "jsdoctags": [
+                        {
+                            "name": "_options",
+                            "type": "any",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "schematics/ng-add/index.ts": [
+                {
+                    "name": "ngAdd",
+                    "file": "schematics/ng-add/index.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "_options",
+                            "type": "any"
+                        }
+                    ],
+                    "returnType": "Rule",
+                    "jsdoctags": [
+                        {
+                            "name": "_options",
+                            "type": "any",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "components/schematics/ng-add/index.ts": [
+                {
+                    "name": "ngAdd",
+                    "file": "components/schematics/ng-add/index.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "_options",
+                            "type": "any"
+                        }
+                    ],
+                    "returnType": "Rule",
+                    "jsdoctags": [
+                        {
+                            "name": "_options",
+                            "type": "any",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ]
         },
-        "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {}
     },
@@ -924,13 +1471,38 @@
                 "name": "routes",
                 "filename": "src/app/app-routing.module.ts",
                 "module": "AppRoutingModule",
-                "children": [],
+                "children": [
+                    {
+                        "path": "alert",
+                        "loadChildren": "./alert-test/alert-test.module#AlertTestModule",
+                        "children": [
+                            {
+                                "kind": "module",
+                                "children": [
+                                    {
+                                        "name": "routes",
+                                        "filename": "src/app/alert-test/alert-routing.module.ts",
+                                        "module": "AlertRoutingModule",
+                                        "children": [
+                                            {
+                                                "path": "",
+                                                "component": "AlertBaseComponent"
+                                            }
+                                        ],
+                                        "kind": "module"
+                                    }
+                                ],
+                                "module": "AlertTestModule"
+                            }
+                        ]
+                    }
+                ],
                 "kind": "module"
             }
         ]
     },
     "coverage": {
-        "count": 3,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -938,7 +1510,17 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Primary",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/alert/Alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Label",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -954,12 +1536,49 @@
                 "status": "low"
             },
             {
+                "filePath": "components/alert/Alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Type",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "components/alert/alert.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "LaAlertComponent",
-                "coveragePercent": 25,
-                "coverageCount": "1/4",
+                "coveragePercent": 12,
+                "coverageCount": "1/8",
+                "status": "low"
+            },
+            {
+                "filePath": "components/schematics/my-service/index.ts",
+                "type": "function",
+                "linksubtype": "function",
+                "name": "myService",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/schematics/my-service/schema.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Schema",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "components/schematics/ng-add/index.ts",
+                "type": "function",
+                "linksubtype": "function",
+                "name": "ngAdd",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -1029,6 +1648,60 @@
                 "name": "AppPage",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "schematics/my-service/index.ts",
+                "type": "function",
+                "linksubtype": "function",
+                "name": "myService",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "schematics/my-service/schema.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Schema",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "schematics/new-module/index.ts",
+                "type": "function",
+                "linksubtype": "function",
+                "name": "newModule",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "schematics/new-module/schema.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Schema",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "schematics/ng-add/index.ts",
+                "type": "function",
+                "linksubtype": "function",
+                "name": "ngAdd",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/alert-test/alert-base.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AlertBaseComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {

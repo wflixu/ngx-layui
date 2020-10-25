@@ -2,4 +2,32 @@
 
 la-alert {
   display: block;
+  box-sizing: border-box;
+  margin: 0;
+  color: rgba(0,0,0,.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum";
+  position: relative;
+  padding: 8px 15px 8px 37px;
+  word-wrap: break-word;
+  border-radius: 2px;
+  &.la-alert-success {
+    background-color: #f6ffed;
+    border: 1px solid #b7eb8f;
+  }
+  &.la-alert-warn {
+    background-color: @la-color-orange;
+    border: 1px solid @la-color-orange;
+  }
+  &.la-alert-error {
+    background-color: @la-color-red;
+    border: 1px solid @la-color-red;
+  }
+  &.la-alert-info {
+    background-color: @la-color-blue;
+    border: 1px solid @la-color-blue;
+  }
 }

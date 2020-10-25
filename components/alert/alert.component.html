@@ -1,4 +1,14 @@
 <section >
-  <span class="la-icon-about"></span>
-  {{label}}
+  <span
+   [ngClass]="{'la-icon-ok-circle': type === 'success',
+     'la-icon-about': type === 'info',
+     'la-icon-close-fill': type === 'warn',
+     'la-icon-close-fill': type === 'error'
+    }"
+  class="la-icon-about"></span>
+   <ng-container *ngTemplateOutlet="labelTpl? labelTpl: labelDefaultTpl"></ng-container>
+   <ng-template #labelDefaultTpl>
+      {{label}}
+   </ng-template>
+
 </section>

@@ -15,7 +15,17 @@ const Template: Story<LaAlertComponent> = (args: LaAlertComponent) => ({
   props: args,
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Basic = Template.bind({});
+Basic.args = {
   label: 'alert test',
+
+};
+export const Label = Template.bind({});
+Label.args = {
+  label: '测试label 接口',
+};
+export const Type = Template.bind({});
+Type.args = {
+  label: '测试type接口',
+  type:'error'
 };
