@@ -500,7 +500,77 @@
                 "AfterContentChecked",
                 "AfterViewInit"
             ],
-            "templateData": "<section >\r\n  <span\r\n   [ngClass]=\"{'la-icon-ok-circle': type === 'success',\r\n     'la-icon-about': type === 'info',\r\n     'la-icon-close-fill': type === 'error'\r\n    }\"\r\n  class=\"la-icon-about\"></span>\r\n   <ng-container *ngTemplateOutlet=\"labelTpl? labelTpl: labelDefaultTpl\"></ng-container>\r\n   <ng-template #labelDefaultTpl>\r\n      {{label}}\r\n   </ng-template>\r\n\r\n</section>\r\n"
+            "templateData": "<section >\r\n  <span\r\n   [ngClass]=\"{'la-icon-ok-circle': type === 'success',\r\n     'la-icon-about': type === 'info',\r\n     'la-icon-close-fill': type === 'warn',\r\n     'la-icon-close-fill': type === 'error'\r\n    }\"\r\n  class=\"la-icon-about\"></span>\r\n   <ng-container *ngTemplateOutlet=\"labelTpl? labelTpl: labelDefaultTpl\"></ng-container>\r\n   <ng-template #labelDefaultTpl>\r\n      {{label}}\r\n   </ng-template>\r\n\r\n</section>\r\n"
+        },
+        {
+            "name": "LaButtonComponent",
+            "id": "component-LaButtonComponent-bc3b17054b41cc17aea2f1c713c85e63",
+            "file": "components/button/button.component.ts",
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
+            "entryComponents": [],
+            "host": {},
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "button[la-button]",
+            "styleUrls": [
+                "./button.component.less"
+            ],
+            "styles": [],
+            "template": "<ng-content></ng-content>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "laSize",
+                    "defaultValue": "'default'",
+                    "line": 26,
+                    "type": "\"large\" | \"small\" | \"default\""
+                },
+                {
+                    "name": "laType",
+                    "defaultValue": "'default'",
+                    "line": 25,
+                    "type": "\"primary\" | \"normal\" | \"warn\" | \"error\" | \"default\""
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 30
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'button[la-button]',\n  encapsulation: ViewEncapsulation.None,\n  template: `\n  <ng-content></ng-content>\n`,\n  styleUrls: ['./button.component.less'],\n  host: {\n    '[class.la-btn]': `true`,\n    '[class.la-btn-primary]': `laType === 'primary'`,\n    '[class.la-btn-default]': `laType === 'default'`,\n    '[class.la-btn-normal]': `laType === 'normal'`,\n    '[class.la-btn-warn]': `laType === 'warn'`,\n    '[class.la-btn-error]': `laType === 'error'`,\n    '[class.la-btn-lg]': `laSize === 'large'`,\n    '[class.la-btn-sm]': `laSize === 'small'`,\n    '[attr.tabindex]': 'disabled ? -1 : (tabIndex === null ? null : tabIndex)',\n    '[attr.disabled]': 'disabled || null'\n  }\n})\nexport class LaButtonComponent implements OnInit {\n\n  @Input() laType: 'primary'|'normal'| 'warn'| 'error'|'default' = 'default'\n  @Input() laSize: 'large'| 'small'| 'default' = 'default';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "button.la-btn {\r\n  display: inline-block;\r\n  height: 38px;\r\n  line-height: 38px;\r\n  padding: 0 18px;\r\n  background-color: #009688;\r\n  color: #fff;\r\n  white-space: nowrap;\r\n  text-align: center;\r\n  font-size: 14px;\r\n  border: none;\r\n  border-radius: 2px;\r\n  cursor: pointer;\r\n  &.la-btn-primary {\r\n    border: 1px solid #c9c9c9;\r\n    background-color: #fff;\r\n    color: #555;\r\n  }\r\n  &.la-btn-normal {\r\n    background-color: #1e9fff;\r\n  }\r\n\r\n  &.la-btn-warm {\r\n    background-color: #ffb800;\r\n  }\r\n  &.la-btn-error {\r\n    background-color: #ff5722;\r\n  }\r\n  &.la-btn-disabled {\r\n    border: 1px solid #e6e6e6;\r\n    background-color: #fbfbfb;\r\n    color: #c9c9c9;\r\n    cursor: not-allowed;\r\n    opacity: 1;\r\n  }\r\n  &.la-btn-lg {\r\n    height: 44px;\r\n    line-height: 44px;\r\n    padding: 0 25px;\r\n    font-size: 16px;\r\n  }\r\n  &.la-btn-sm {\r\n    height: 30px;\r\n    line-height: 30px;\r\n    padding: 0 10px;\r\n    font-size: 12px;\r\n  }\r\n}\r\n",
+                    "styleUrl": "./button.component.less"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 26
+            },
+            "implements": [
+                "OnInit"
+            ]
         },
         {
             "name": "PageComponent",
@@ -717,7 +787,11 @@
                 },
                 {
                     "type": "declarations",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "LaButtonComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "imports",
@@ -725,7 +799,11 @@
                 },
                 {
                     "type": "exports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "LaButtonComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -826,6 +904,14 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Basic",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/button/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -873,14 +959,6 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Large",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -909,14 +987,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Page.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -933,22 +1003,6 @@
                 "subtype": "variable",
                 "file": "src/test.ts",
                 "type": "literal type"
-            },
-            {
-                "name": "Secondary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Small",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "specFiles",
@@ -978,9 +1032,9 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
+                "file": "components/button/Button.stories.ts",
+                "type": "Story<LaButtonComponent>",
+                "defaultValue": "(args: LaButtonComponent) => ({\n  component: LaButtonComponent,\n  moduleMetadata: {\n    declarations: [LaButtonComponent],\n  },\n  props: args,\n  // template: `<button la-button >la-button</button>`,\n})"
             },
             {
                 "name": "Template",
@@ -988,7 +1042,7 @@
                 "subtype": "variable",
                 "file": "src/stories/Header.stories.ts",
                 "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
+                "defaultValue": "(args: Header) => ({\n  component: Header,\n  content: 'aksdjkfjaksdjf',\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1204,6 +1258,24 @@
                     "defaultValue": "Template.bind({})"
                 }
             ],
+            "components/button/Button.stories.ts": [
+                {
+                    "name": "Basic",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/button/Button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/button/Button.stories.ts",
+                    "type": "Story<LaButtonComponent>",
+                    "defaultValue": "(args: LaButtonComponent) => ({\n  component: LaButtonComponent,\n  moduleMetadata: {\n    declarations: [LaButtonComponent],\n  },\n  props: args,\n  // template: `<button la-button >la-button</button>`,\n})"
+                }
+            ],
             "src/test.ts": [
                 {
                     "name": "context",
@@ -1241,48 +1313,6 @@
                     "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
-            "src/stories/Button.stories.ts": [
-                {
-                    "name": "Large",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Small",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
-                }
-            ],
             "src/stories/Header.stories.ts": [
                 {
                     "name": "LoggedIn",
@@ -1306,7 +1336,7 @@
                     "subtype": "variable",
                     "file": "src/stories/Header.stories.ts",
                     "type": "Story<Header>",
-                    "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
+                    "defaultValue": "(args: Header) => ({\n  component: Header,\n  content: 'aksdjkfjaksdjf',\n  props: args,\n})"
                 }
             ],
             "src/stories/Page.stories.ts": [
@@ -1555,6 +1585,35 @@
                 "status": "low"
             },
             {
+                "filePath": "components/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LaButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
                 "filePath": "components/schematics/my-service/index.ts",
                 "type": "function",
                 "linksubtype": "function",
@@ -1729,56 +1788,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "environment",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Large",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

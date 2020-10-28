@@ -1,0 +1,11 @@
+<p>home works!</p>
+<div *ngIf="text">
+  <ng-container *laStringTemplateOutlet="text"  >{{text}}</ng-container>
+</div>
+
+<ng-template #textTemp>
+  <h2>test template</h2>
+</ng-template>
+
+<button (click)="onClick()">toggle</button>
+

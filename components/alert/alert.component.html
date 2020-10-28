@@ -3,7 +3,7 @@
    [ngClass]="{'la-icon-ok-circle': type === 'success',
      'la-icon-about': type === 'info',
      'la-icon-close-fill': type === 'warn',
-     'la-icon-close-fill': type === 'error'
+     'la-icon-close-error': type === 'error'
     }"
   class="la-icon-about"></span>
    <ng-container *ngTemplateOutlet="labelTpl? labelTpl: labelDefaultTpl"></ng-container>

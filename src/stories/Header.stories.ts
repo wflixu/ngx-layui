@@ -19,6 +19,7 @@ export default {
 
 const Template: Story<Header> = (args: Header) => ({
   component: Header,
+  content: 'aksdjkfjaksdjf',
   props: args,
 });
 
